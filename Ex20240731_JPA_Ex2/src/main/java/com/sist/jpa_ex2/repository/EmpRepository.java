@@ -13,5 +13,17 @@ public interface EmpRepository extends JpaRepository<Emp, String>{
     List<Emp> findByEname(String ename);
     
     List<Emp> findByEnameContaining(String ename);
+    List<Emp> findByEnameLike(String ename);
+
+    List<Emp> findByJobLike(String job);
+    
+    List<Emp> findByJobLikeAndDeptno(String job, String deptno);
+    
+    List<Emp> findByJobLikeOrDeptno(String job, String deptno);
+
+    List<Emp> findBySalLessThan(int sal);
+    List<Emp> findBySalLessThanEqual(int sal);
+    List<Emp> findBySalGreaterThan(int sal);
+    List<Emp> findBySalGreaterThanEqual(int sal);
     
 } 

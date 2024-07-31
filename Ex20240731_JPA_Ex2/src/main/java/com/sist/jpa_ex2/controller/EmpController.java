@@ -23,6 +23,12 @@ public class EmpController {
             sb.append(emp.getEmpno());
             sb.append(" || ");
             sb.append(emp.getEname());
+            sb.append(" || ");
+            sb.append(emp.getJob());
+            sb.append(" || ");
+            sb.append(emp.getSal());
+            sb.append(" || ");
+            sb.append(emp.getDeptno());
             sb.append("<br/>");
         }
 
@@ -39,6 +45,12 @@ public class EmpController {
                 sb.append(emp.getEmpno());
                 sb.append(" || ");
                 sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
                 sb.append("<br/>");
             }
         } else{
@@ -57,6 +69,12 @@ public class EmpController {
                 sb.append(emp.getEmpno());
                 sb.append(" || ");
                 sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
                 sb.append("<br/>");
             }
         } else{
@@ -66,4 +84,204 @@ public class EmpController {
         return sb.toString();
     }
     
+    @GetMapping("searchNameLike")
+    public String searchNameLike(String ename) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchNameLike(ename);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+
+    @GetMapping("searchJobLike")
+    public String searchJobLike(String job) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchJobLike(job);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+
+    @GetMapping("searchJobLikeAndDeptno")
+    public String searchJobLikeAndDeptno(String job, String deptno) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchJobLikeAndDeptno(job, deptno);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+
+    @GetMapping("searchJobLikeOrDeptno")
+    public String searchJobLikeOrDeptno(String job, String deptno) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchJobLikeOrDeptno(job, deptno);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+    
+    @GetMapping("searchSalLessThan")
+    public String searchSalLessThan(int sal) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchSalLessThan(sal);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+    
+    @GetMapping("searchSalLessThanEqual")
+    public String searchSalLessThanEqual(int sal) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchSalLessThanEqual(sal);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+    
+    @GetMapping("searchSalGreaterThan")
+    public String searchSalGreaterThan(int sal) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchSalGreaterThan(sal);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+    
+    @GetMapping("searchSalGreaterThanEqual")
+    public String searchSalGreaterThanEqual(int sal) {
+        StringBuffer sb = new StringBuffer();
+
+        Emp[] e_ar = empService.searchSalGreaterThanEqual(sal);
+        if(e_ar != null){
+            for(Emp emp: e_ar){
+                sb.append(emp.getEmpno());
+                sb.append(" || ");
+                sb.append(emp.getEname());
+                sb.append(" || ");
+                sb.append(emp.getJob());
+                sb.append(" || ");
+                sb.append(emp.getSal());
+                sb.append(" || ");
+                sb.append(emp.getDeptno());
+                sb.append("<br/>");
+            }
+        } else{
+            sb.append("검색결과가 없습니다.");
+        }
+
+        return sb.toString();
+    }
+
 }

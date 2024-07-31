@@ -15,5 +15,11 @@ public class Emp {
     private String empno;
     @Column(name = "ename")
     private String ename;
+    @Column(name = "job")
+    private String job;
+    @Column(name = "deptno")
+    private String deptno;
+    @Column(name = "sal")
+    private int sal;
 
 }
