@@ -1,0 +1,25 @@
+#logoImg{
+    background-image: url("../images/title_logo_100.png");
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#wrap{
+    display: inline-block;
+}
+
+#nav{
+    list-style: none;
+    display: flex;
+    flex-direction: right;
+
+}
+
+#nav li{
+    margin: 0 15px;
+}
+
+#nav li:hover{
+    color: #686868;
+}
